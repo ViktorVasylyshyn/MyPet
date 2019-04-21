@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="showProgress"
+            type="android.databinding.ObservableBoolean" />
+
+        <variable
+            name="petItem"
+            type="com.crazyraccoons.mypet.data.model.PetItem" />
+
+        <variable
+            name="fragmentCallback"
+            type="com.crazyraccoons.mypet.fragments.addnewpet.AddNewPetCallback" />
+
+        <variable
+            name="setPetsDataViewModel"
+            type="com.crazyraccoons.mypet.viewmodels.SetPetsDataViewModel"/>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/add_pet_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/recycler_view_layout_margins"
+            android:background="@drawable/rectangle_gradient_fields_background"
+            android:gravity="center"
+            android:text="@string/customize_pet"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/add_pet_image"
+            android:layout_width="@dimen/add_pet_profile_image_size"
+            android:layout_height="@dimen/add_pet_profile_image_size"
+            android:onClick="@{(view) -> fragmentCallback.setProfileImage()}"
+            android:src="@{petItem.imageUrl}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_pet_title"
+            tools:ignore="ContentDescription" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_gradient_fields_background"
+            app:layout_constraintBottom_toBottomOf="@+id/add_pet_image"
+            app:layout_constraintStart_toEndOf="@+id/add_pet_image">
+
+            <ImageView
+                android:id="@+id/add_pet_gender"
+                android:layout_width="@dimen/add_pet_profile_gender_size"
+                android:layout_height="@dimen/add_pet_profile_gender_size"
+                android:layout_margin="@dimen/fields_layout_margins"
+                android:onClick="@{(view) -> setPetsDataViewModel.setPetGender()}"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_gradient_fields_background"
+            app:layout_constraintBottom_toBottomOf="@+id/add_pet_image"
+            app:layout_constraintEnd_toStartOf="@+id/add_pet_image">
+
+            <ImageView
+                android:id="@+id/add_pet_sort"
+                android:layout_width="@dimen/add_pet_profile_gender_size"
+                android:layout_height="@dimen/add_pet_profile_gender_size"
+                android:layout_margin="@dimen/fields_layout_margins"
+                android:onClick="@{(view) -> setPetsDataViewModel.setPetSort()}"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/add_pet_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fields_layout_margins"
+            android:layout_marginStart="@dimen/recycler_view_layout_margins"
+            android:layout_marginEnd="@dimen/recycler_view_layout_margins"
+            android:background="@drawable/rectangle_gradient_fields_background"
+            android:gravity="center"
+            android:hint="@string/add_pet_name"
+            android:inputType="text"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:text="@={petItem.name}"
+            android:textColorHint="@color/colorPrimaryLight"
+            android:textSize="@dimen/fields_text_size"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_pet_image"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/add_pet_height"
+            android:layout_width="@dimen/add_pet_profile_image_size"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fields_layout_margins"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_gradient_fields_background"
+            android:gravity="center"
+            android:hint="@string/add_pet_height"
+            android:inputType="number"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:text="@={petItem.height}"
+            android:textColorHint="@color/colorPrimaryLight"
+            android:textSize="@dimen/fields_text_size"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toStartOf="@+id/add_pet_weight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_pet_name"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/add_pet_weight"
+            android:layout_width="@dimen/add_pet_profile_image_size"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fields_layout_margins"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_gradient_fields_background"
+            android:gravity="center"
+            android:hint="@string/add_pet_weight"
+            android:inputType="number"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:text="@={petItem.weight}"
+            android:textColorHint="@color/colorPrimaryLight"
+            android:textSize="@dimen/fields_text_size"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/add_pet_height"
+            app:layout_constraintTop_toBottomOf="@+id/add_pet_name"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/add_pet_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fields_layout_margins"
+            android:background="@drawable/rectangle_gradient_fields_background"
+            android:gravity="center"
+            android:hint="@string/add_pet_info"
+            android:inputType="text"
+            android:maxLength="100"
+            android:maxLines="2"
+            android:text="@={petItem.description}"
+            android:textColorHint="@color/colorPrimaryLight"
+            android:textSize="@dimen/fields_text_size"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_pet_height"
+            tools:ignore="Autofill" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/fields_layout_margins"
+            android:background="@drawable/circle_gradient_fields_background"
+            android:onClick="@{(view) -> fragmentCallback.addNewPet()}"
+            android:text="@string/add_button"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_pet_description" />
+
+        <ProgressBar
+            android:id="@+id/my_petsList_progress_bar"
+            android:layout_width="@dimen/half_of_profile_image_size"
+            android:layout_height="@dimen/half_of_profile_image_size"
+            android:backgroundTint="@color/colorPrimaryLight"
+            android:theme="@style/Widget.AppCompat.ProgressBar"
+            android:visibility="@{showProgress ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/recycler_view_layout_margins"
+            android:layout_marginRight="@dimen/recycler_view_layout_margins"
+            android:layout_marginBottom="@dimen/half_of_profile_image_size"
+            android:background="@drawable/rectangle_gradient_fields_background"
+            android:padding="@dimen/fields_layout_margins"
+            android:text="@string/user_hint"
+            android:textSize="@dimen/fields_text_size"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

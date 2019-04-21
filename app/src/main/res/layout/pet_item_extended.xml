@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="petItemExtended"
+            type="com.crazyraccoons.mypet.data.model.PetItem" />
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/recycler_view_layout_margins"
+        android:background="@drawable/rectangle_gradient_fields_background">
+
+        <ImageView
+            android:id="@+id/pet_item_extended_image"
+            android:layout_width="@dimen/add_pet_profile_image_size"
+            android:layout_height="@dimen/add_pet_profile_image_size"
+            android:src="@{petItemExtended.imageUrl}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/pet_item_extended_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fields_layout_margins"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@{petItemExtended.name}"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="@dimen/fields_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pet_item_extended_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pet_item_extended_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fields_layout_margins"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@{petItemExtended.height}"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="@dimen/fields_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/pet_item_extended_weight"
+            app:layout_constraintStart_toEndOf="@+id/pet_item_extended_image"
+            app:layout_constraintTop_toBottomOf="@+id/pet_item_extended_name" />
+
+        <TextView
+            android:id="@+id/pet_item_extended_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fields_layout_margins"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@{petItemExtended.weight}"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="@dimen/fields_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pet_item_extended_height"
+            app:layout_constraintTop_toBottomOf="@+id/pet_item_extended_name" />
+
+        <ImageView
+            android:id="@+id/pet_item_extended_sort"
+            android:layout_width="@dimen/half_of_profile_image_size"
+            android:layout_height="@dimen/half_of_profile_image_size"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toStartOf="@+id/pet_item_extended_gender"
+            app:layout_constraintStart_toEndOf="@+id/pet_item_extended_image"
+            app:layout_constraintTop_toBottomOf="@+id/pet_item_extended_weight"
+            app:sort="@{petItemExtended.sort}"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/pet_item_extended_gender"
+            android:layout_width="@dimen/half_of_profile_image_size"
+            android:layout_height="@dimen/half_of_profile_image_size"
+            android:layout_weight="1"
+            app:gender="@{petItemExtended.gender}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pet_item_extended_sort"
+            app:layout_constraintTop_toBottomOf="@+id/pet_item_extended_weight"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fields_layout_margins"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="3"
+            android:text="@{petItemExtended.description}"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="@dimen/fields_text_size"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pet_item_extended_image" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

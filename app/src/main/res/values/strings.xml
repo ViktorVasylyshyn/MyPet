@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">My Pet</string>
+
+    <string name="bnb_icon_text"> </string>
+
+    <string name="local_images_path">image/*</string>
+
+    <string name="add_button">добавить</string>
+
+    <string name="customize_pet">НАСТРОЙ ПРОФАЙЛ ПИТОМЦА</string>
+
+    <!--Profile Fields hints-->
+    <string name="add_pet_name">* имя</string>
+    <string name="add_pet_height">* рост(см)</string>
+    <string name="add_pet_weight">* вес(кг)</string>
+    <string name="add_pet_info">описание(макс 100 символов)</string>
+
+    <string name="user_hint">   Добавление фотографии и полной информации о Вашем питомце увеличит привлекательность профиля!</string>
+
+
+    <!--Toasts messages-->
+    <string name="saving_failed">Сохраненить изображение не удалось.</string>
+    <string name="saving_successful">Сохранение прошло успешно.</string>
+    <string name="fields_input_error">Заполните все обязательные поля, обозначенные " * "</string>
+    <string name="no_internet_connection">Ой. Подключитесь к сети и попробуйте снова.</string>
+    <string name="error">В приложени произошла ошибка. Перезапустите и повторите действие.</string>
+
+</resources>

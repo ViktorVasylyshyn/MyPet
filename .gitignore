@@ -1,0 +1,21 @@
+# Local configuration file 
+local.properties
+
+# Generated files
+bin/
+gen/
+out/
+
+# Gradle files
+.gradle/
+build/
+
+# Intellij
+*.iws
+*.iml
+*.ipr
+.idea/
+.idea/sonarlint
+
+# Sonar
+.sonar/

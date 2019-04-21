@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "270413653354",
+    "firebase_url": "https://my-pet-12f8a.firebaseio.com",
+    "project_id": "my-pet-12f8a",
+    "storage_bucket": "my-pet-12f8a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270413653354:android:710a2a079860af03",
+        "android_client_info": {
+          "package_name": "com.crazyraccoons.mypet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "270413653354-3ec3vvhcm3b3iu4kd3sbf0mm3adtj50g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMJAsiMr3dVAO6J6EcIm12oW8pkJBTI6c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "270413653354-3ec3vvhcm3b3iu4kd3sbf0mm3adtj50g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

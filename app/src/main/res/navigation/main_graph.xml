@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/addNewPetFragment">
+    <fragment
+        android:id="@+id/addNewPetFragment"
+        android:name="com.crazyraccoons.mypet.fragments.addnewpet.AddNewPetFragment"
+        android:label="add_new_pet_fragment"
+        tools:layout="@layout/add_new_pet_fragment" />
+    <fragment
+        android:id="@+id/myPetsListFragment"
+        android:name="com.crazyraccoons.mypet.fragments.MyPetsListFragment"
+        android:label="my_pets_list_fragment"
+        tools:layout="@layout/my_pets_list_fragment" />
+    <fragment
+        android:id="@+id/myPetsListExtendedFragment"
+        android:name="com.crazyraccoons.mypet.fragments.MyPetsListExtendedFragment"
+        android:label="my_pets_list_extended_fragment"
+        tools:layout="@layout/my_pets_list_extended_fragment" />
+    <action
+        android:id="@+id/action_global_addNewPetFragment"
+        app:destination="@id/addNewPetFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+    <action
+        android:id="@+id/action_global_myPetsListFragment"
+        app:destination="@id/myPetsListFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+    <action
+        android:id="@+id/action_global_myPetsListExtendedFragment"
+        app:destination="@id/myPetsListExtendedFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+</navigation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4f4c47</color>
+    <color name="colorPrimaryDark">#363531</color>
+    <color name="colorPrimaryLight">#994F4C47</color>
+    <color name="colorAccent">#A29A91</color>
+
+    <color name="bnb_color_start">#B2D4DCDD</color>
+    <color name="bnb_color_end">#65F4F7F7</color>
+
+    <color name="circle_gradient_color_start">#80B0B6B0</color>
+    <color name="circle_gradient_color_end">#ECF1EB</color>
+
+</resources>

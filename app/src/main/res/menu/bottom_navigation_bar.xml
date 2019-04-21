@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/bnm_add_pet"
+        android:icon="@drawable/bnb_child_selector_add_pet"
+        android:title="@string/bnb_icon_text"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/bnm_pets_list"
+        android:icon="@drawable/bnb_child_selector_pets_list"
+        android:title="@string/bnb_icon_text"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/bnm_pets_list_extended"
+        android:icon="@drawable/bnb_child_selector_pets_list_extended"
+        android:title="@string/bnb_icon_text"
+        app:showAsAction="ifRoom"/>
+
+</menu>
